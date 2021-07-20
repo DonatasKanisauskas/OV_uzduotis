@@ -20,23 +20,23 @@ h2::before {
   top: -20px;
   left: -20px;
 }
-@media only screen and (max-width: 575px) {
-  .main-block, .block {
-    border: none;
-  }
-  .main-block {
-    height: 200px;
-    padding-top: 30px;
+@media only screen and (max-width: 800px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .block {
     border-top: 1px solid black;
   }
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
   }
+  .main-block {
+    padding-top: 30px;
+  }
+}
+@media only screen and (max-width: 575px) {
   h2 {
     position: relative;
     font-size: 20px;
@@ -45,23 +45,11 @@ h2::before {
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .main-block, .block {
-    border: none;
-  }
   .main-block {
     height: 200px;
-    padding-top: 30px;
-  }
-  .block {
-    border-top: 1px solid black;
   }
   .container {
     max-width: 540px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
   }
   h2 {
     position: relative;
@@ -71,22 +59,11 @@ h2::before {
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 800px) {
-  .main-block, .block {
-    border: none;
-  }
   .main-block {
     height: 322px;
-    padding-top: 30px;
-  }
-  .block {
-    border-top: 1px solid black;
   }
   .container {
     max-width: 690px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
   }
   h2 {
     position: relative;
@@ -95,24 +72,25 @@ h2::before {
     margin: 50px 50px 0 50px;
   }
   h2::before {
-    position: absolute;
-    font-size: 14px;
     top: -40px;
-    left: -20px;
     transition: all 0.5s ease;
   }
+  h2::after {
+    top: 15px;
+  }
+}
+@media only screen and (min-width: 768px){
   h2::after {
     position: absolute;
     content: '';
     width: 70px;
     height: 1px;
-    top: 15px;
     left: -20px;
     background: black;
     transition: all 0.5s ease;
   }
 }
-@media only screen and (min-width: 801px) and (max-width: 980px) {
+@media only screen and (min-width: 801px) {
   .main-block, .block {
     position: absolute;
     border: 1px solid black;
@@ -120,482 +98,172 @@ h2::before {
   .main-block {
     height: 700px;
     width: 700px;
-    left: -240px;
-    top: 20px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
   .block div {
     display: table-cell;
     vertical-align: middle;
   }
+
   h2 {
     margin: 50px;
     font-size: 28px;
     position: relative;
   }
-  h2::after {
-    position: absolute;
-    content: '';
-    width: 70px;
-    height: 1px;
-    left: -20px;
-    background: black;
-    transition: all 0.5s ease;
-  }
 
+  .rot36-min{
+    -ms-transform: rotate(-34deg);
+    -webkit-transform: rotate(-34deg);
+    transform: rotate(-34deg);
+  }
+  .rot36-plus{
+    -ms-transform: rotate(34deg);
+    -webkit-transform: rotate(34deg);
+    transform: rotate(34deg);
+  }
   #b1 {
     width: 420px;
     height: 300px;
-    left: 309px;
-    top: -178px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
-  .resume {
-    padding: 160px 0 0 50px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
-  }
-  
   #b2 {
     width: 420px;
     height: 400px;
-    left: 505px;
-    top: 63px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
-  .portfolio {
-    padding: 160px 0 0 50px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
+  #b4 {
+    width: 430px;
+    height: 400px;
   }
 
+  .portfolio {
+    padding: 160px 0 0 50px;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1919px) {
+  .main-block {
+    left: -240px;
+    top: 20px;
+  }
+  
+  #b1 {
+    left: 309px;
+    top: -178px;
+  }
+  #b2 {
+    left: 505px;
+    top: 63px;
+  }
+
+  .resume {
+    padding: 160px 0 0 50px;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 980px) {
   #b3 {
     width: 370px;
     height: 270px;
     left: 334px;
     top: 545px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
   .blog {
     padding: 10px 0px 0px 90px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
   }
 
   #b4 {
-    width: 430px;
-    height: 400px;
     left: 8px;
     top: 758px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
   .contact {
     padding: 0 0 20px 150px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
+  }
+}
+@media only screen and (min-width: 981px) {
+  #b3 {
+    width: 420px;
+    height: 300px;
   }
 }
 @media only screen and (min-width: 981px) and (max-width: 1024px) {
-  .main-block, .block {
-    position: absolute;
-    border: 1px solid black;
-  }
-  .main-block {
-    height: 700px;
-    width: 700px;
-    left: -240px;
-    top: 20px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
-  }
-  .block div {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  h2 {
-    margin: 50px;
-    font-size: 28px;
-    position: relative;
-  }
-  h2::after {
-    position: absolute;
-    content: '';
-    width: 70px;
-    height: 1px;
-    left: -20px;
-    background: black;
-    transition: all 0.5s ease;
-  }
-
-  #b1 {
-    width: 420px;
-    height: 300px;
-    left: 309px;
-    top: -178px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
-  }
-  .resume {
-    padding: 160px 0 0 50px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
-  }
-  
-  #b2 {
-    width: 420px;
-    height: 400px;
-    left: 505px;
-    top: 63px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
-  }
-  .portfolio {
-    padding: 160px 0 0 50px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
-  }
-
   #b3 {
-    width: 370px;
-    height: 270px;
-    left: 697px;
-    top: 421px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
+    left: 701px;
+    top: 404px;
   }
   .blog {
-    padding: 10px 0px 0px 90px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
+    padding: 40px 0px 0px 70px;
   }
 
   #b4 {
-    width: 430px;
-    height: 400px;
     left: 315px;
     top: 551px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
   .contact {
     padding: 40px 0 0 110px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-  .main-block, .block {
-    position: absolute;
-    border: 1px solid black;
-  }
-  .main-block {
-    height: 700px;
-    width: 700px;
-    left: -240px;
-    top: 20px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
-  }
-  .block div {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  h2 {
-    margin: 50px;
-    font-size: 28px;
-    position: relative;
-  }
-  h2::after {
-    position: absolute;
-    content: '';
-    width: 70px;
-    height: 1px;
-    left: -20px;
-    background: black;
-    transition: all 0.5s ease;
-  }
-
-  #b1 {
-    width: 420px;
-    height: 300px;
-    left: 309px;
-    top: -178px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
-  }
-  .resume {
-    padding: 160px 0 0 50px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
-  }
-  
-  #b2 {
-    width: 420px;
-    height: 400px;
-    left: 505px;
-    top: 63px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
-  }
-  .portfolio {
-    padding: 160px 0 0 50px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
-  }
-
   #b3 {
-    width: 370px;
-    height: 270px;
-    left: 697px;
-    top: 421px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
+    left: 701px;
+    top: 404px;
   }
   .blog {
-    padding: 10px 0px 0px 90px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
+    padding: 40px 0px 0px 70px;
   }
 
   #b4 {
-    width: 430px;
-    height: 400px;
     left: 315px;
     top: 551px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
   .contact {
     padding: 40px 0 0 110px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
   }
 }
 @media only screen and (min-width: 1281px) and (max-width: 1919px) {
-  .main-block, .block {
-    position: absolute;
-    border: 1px solid black;
-  }
-  .main-block {
-    height: 700px;
-    width: 700px;
-    left: -240px;
-    top: 20px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
-  }
-  .block div {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  h2 {
-    margin: 50px;
-    font-size: 28px;
-    position: relative;
-  }
-  h2::after {
-    position: absolute;
-    content: '';
-    width: 70px;
-    height: 1px;
-    left: -20px;
-    background: black;
-    transition: all 0.5s ease;
-  }
-
-  #b1 {
-    width: 420px;
-    height: 300px;
-    left: 309px;
-    top: -178px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
-  }
-  .resume {
-    padding: 160px 0 0 50px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
-  }
-  
-  #b2 {
-    width: 420px;
-    height: 400px;
-    left: 505px;
-    top: 63px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
-  }
-  .portfolio {
-    padding: 160px 0 0 50px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
-  }
-
   #b3 {
-    width: 420px;
-    height: 300px;
     left: 701px;
     top: 404px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
   .blog {
     padding: 40px 0px 0px 70px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
   }
 
   #b4 {
-    width: 430px;
-    height: 400px;
     left: 1000px;
     top: 43px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
   .contact {
     padding: 90px 0 0 70px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
   }
 }
 @media only screen and (min-width: 1920px) {
-  .main-block, .block {
-    position: absolute;
-    border: 1px solid black;
-  }
   .main-block {
-    height: 700px;
-    width: 700px;
     left: 60px;
     top: 120px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
-  }
-  .block div {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  h2 {
-    margin: 50px;
-    font-size: 28px;
-    position: relative;
-  }
-  h2::after {
-    position: absolute;
-    content: '';
-    width: 70px;
-    height: 1px;
-    left: -20px;
-    background: black;
-    transition: all 0.5s ease;
   }
 
   #b1 {
-    width: 420px;
-    height: 300px;
     left: 609px;
     top: -78px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
-  .resume {
-    padding: 120px 0 0 40px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
-  }
-  
   #b2 {
-    width: 420px;
-    height: 400px;
     left: 805px;
     top: 163px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
-  .portfolio {
-    padding: 160px 0 0 50px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
-  }
-
   #b3 {
-    width: 420px;
-    height: 300px;
     left: 1001px;
     top: 504px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
+  }
+  #b4 {
+    left: 1300px;
+    top: 143px;
+  }
+
+  .resume {
+    padding: 120px 0 0 40px;
   }
   .blog {
     padding: 40px 0px 0px 70px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
-  }
-
-  #b4 {
-    width: 430px;
-    height: 400px;
-    left: 1300px;
-    top: 143px;
-    -ms-transform: rotate(-34deg);
-    -webkit-transform: rotate(-34deg);
-    transform: rotate(-34deg);
   }
   .contact {
     padding: 90px 0 0 70px;
-    -ms-transform: rotate(34deg);
-    -webkit-transform: rotate(34deg);
-    transform: rotate(34deg);
   }
 }
-
-
