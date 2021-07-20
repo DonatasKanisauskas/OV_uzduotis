@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  transition: 0.5s ease;
 }
 .resume h2::before {
   content: "01"
@@ -20,6 +21,22 @@ h2::before {
   top: -20px;
   left: -20px;
 }
+a {
+  color: black;
+  text-decoration: none;
+}
+@media only screen and (max-width: 575px) {
+  h2 {
+    position: relative;
+    font-size: 20px;
+    line-height: 2em;
+    margin: 25px 0 25px 40px;
+  }
+}@media only screen and (max-width: 767px) {
+  .main-block {
+    height: 200px;
+  }
+}
 @media only screen and (max-width: 800px) {
   .container {
     padding-left: 15px;
@@ -36,18 +53,7 @@ h2::before {
     padding-top: 30px;
   }
 }
-@media only screen and (max-width: 575px) {
-  h2 {
-    position: relative;
-    font-size: 20px;
-    line-height: 2em;
-    margin: 25px 0 25px 40px;
-  }
-}
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .main-block {
-    height: 200px;
-  }
   .container {
     max-width: 540px;
   }
@@ -91,6 +97,13 @@ h2::before {
   }
 }
 @media only screen and (min-width: 801px) {
+  .block {
+    box-sizing:border-box;
+  }
+  .block:hover {
+    box-sizing: border-box;
+    border: solid black 15px;
+  }
   .main-block, .block {
     position: absolute;
     border: 1px solid black;
@@ -102,6 +115,14 @@ h2::before {
   .block div {
     display: table-cell;
     vertical-align: middle;
+  }
+  .block:hover div h2::before {
+    top: -5px;
+    transition: 0.5s ease;
+  }
+  .block:hover div h2::after {
+    top: 14px;
+    transition: 0.5s ease;
   }
 
   h2 {
@@ -146,15 +167,15 @@ h2::before {
   
   #b1 {
     left: 309px;
-    top: -178px;
+    top: -176px;
   }
   #b2 {
-    left: 505px;
-    top: 63px;
+    left: 504px;
+    top: 64px;
   }
 
   .resume {
-    padding: 160px 0 0 50px;
+    padding: 150px 0 0 30px;
   }
 }
 
@@ -170,8 +191,8 @@ h2::before {
   }
 
   #b4 {
-    left: 8px;
-    top: 758px;
+    left: 10px;
+    top: 757px;
   }
   .contact {
     padding: 0 0 20px 150px;
@@ -201,33 +222,31 @@ h2::before {
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-  #b3 {
-    left: 701px;
-    top: 404px;
-  }
   .blog {
     padding: 40px 0px 0px 70px;
   }
 
   #b4 {
-    left: 315px;
+    left: 316px;
     top: 551px;
   }
   .contact {
     padding: 40px 0 0 110px;
   }
 }
-@media only screen and (min-width: 1281px) and (max-width: 1919px) {
+@media only screen and (min-width: 1025px) and (max-width: 1919px) {
   #b3 {
-    left: 701px;
-    top: 404px;
+    left: 699px;
+    top: 403px;
   }
+}
+@media only screen and (min-width: 1281px) and (max-width: 1919px) {
   .blog {
     padding: 40px 0px 0px 70px;
   }
 
   #b4 {
-    left: 1000px;
+    left: 997px;
     top: 43px;
   }
   .contact {
@@ -242,18 +261,18 @@ h2::before {
 
   #b1 {
     left: 609px;
-    top: -78px;
+    top: -75px;
   }
   #b2 {
-    left: 805px;
-    top: 163px;
+    left: 804px;
+    top: 164px;
   }
   #b3 {
-    left: 1001px;
-    top: 504px;
+    left: 999px;
+    top: 503px;
   }
   #b4 {
-    left: 1300px;
+    left: 1296px;
     top: 143px;
   }
 
