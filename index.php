@@ -1,9 +1,6 @@
 <?php include("templates/header.html") ?>
 
 <div class="main-container">
-  <div class="bg-cover">
-    <div class="background-cover"></div>
-  </div>
   <div class="left-panel">
     <div class="main-block rot36-min">
       <div class="rot36-plus"></div>
