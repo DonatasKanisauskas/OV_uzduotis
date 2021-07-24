@@ -1,9 +1,15 @@
 $("a").hover(
   function () {
-    $(".cursor").css("transform", "matrix(2, 0, 0, 2, 0, 0)");
+    $(".cursor").css({
+      transform: "matrix(2, 0, 0, 2, 0, 0)",
+      border: "1px solid #6b6b6b6b",
+    });
   },
   function () {
-    $(".cursor").css("transform", "matrix(1, 0, 0, 1, 0, 0)");
+    $(".cursor").css({
+      transform: "matrix(1, 0, 0, 1, 0, 0)",
+      border: "2px solid #6b6b6b",
+    });
   }
 );
 
